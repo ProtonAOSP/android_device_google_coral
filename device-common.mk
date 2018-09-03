@@ -133,3 +133,7 @@ PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 # Use Vulkan backend for Skia UI rendering
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=skiavk
+
+# Enable missing props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.opa.eligible_device=true

@@ -522,11 +522,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-pixel-legacy.recovery \
     android.hardware.boot@1.1-service \
 
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-    mm_logd
-endif
-
 # Thermal HAL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
@@ -797,7 +792,11 @@ PRODUCT_PACKAGES += \
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=256m
+    dalvik.vm.heapgrowthlimit=256m \
+
+# Use 64-bit dex2oat for better dexopt time.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
 
 PRODUCT_PACKAGES += \
     ipacm \

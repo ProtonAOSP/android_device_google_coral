@@ -23,4 +23,8 @@
 
     <!-- Whether global actions should show an informational message about changes in S -->
     <bool name="global_actions_show_change_info">true</bool>
+
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+     vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
 </resources>

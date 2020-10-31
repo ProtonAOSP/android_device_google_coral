@@ -129,3 +129,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1
 
 PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
+
+# Use Vulkan backend for Skia UI rendering
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.hwui.renderer=skiavk

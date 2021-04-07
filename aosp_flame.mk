@@ -44,6 +44,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, device/google/coral/device-flame.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-flame.mk)
+$(call inherit-product-if-exists, vendor/google/flame/flame-vendor.mk)
+$(call inherit-product-if-exists, vendor/google/coral/coral-vendor.mk)
 
 # Don't build super.img.
 PRODUCT_BUILD_SUPER_PARTITION := false

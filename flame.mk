@@ -14,16 +14,8 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_coral.mk \
-    $(LOCAL_DIR)/coral.mk \
-    $(LOCAL_DIR)/aosp_flame.mk \
-    $(LOCAL_DIR)/flame.mk \
-    $(LOCAL_DIR)/aosp_coral_hwasan.mk \
-    $(LOCAL_DIR)/aosp_flame_hwasan.mk \
+# Inherit AOSP product configuration
+$(call inherit-product, device/google/coral/aosp_flame.mk)
 
-COMMON_LUNCH_CHOICES := \
-    aosp_coral-userdebug \
-    coral-userdebug \
-    aosp_flame-userdebug \
-    flame-userdebug \
+# Remove AOSP prefix from product name
+PRODUCT_NAME := flame

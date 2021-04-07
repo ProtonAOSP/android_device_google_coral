@@ -44,6 +44,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, device/google/coral/device-flame.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-flame.mk)
+$(call inherit-product-if-exists, vendor/google/flame/flame-vendor.mk)
+$(call inherit-product-if-exists, vendor/google/coral/coral-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml

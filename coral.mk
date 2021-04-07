@@ -14,22 +14,8 @@
 # limitations under the License.
 #
 
-#
-# In memory of David L. Gerg, a Googler from Munich, Germany, and a passionate
-# Android and Pixel fan who suddenly and unexpectedly passed way too early in
-# February 2020. We miss you David, R.I.P.
-#
+# Inherit AOSP product configuration
+$(call inherit-product, device/google/coral/aosp_coral.mk)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_coral.mk \
-    $(LOCAL_DIR)/coral.mk \
-    $(LOCAL_DIR)/aosp_flame.mk \
-    $(LOCAL_DIR)/flame.mk \
-    $(LOCAL_DIR)/aosp_coral_hwasan.mk \
-    $(LOCAL_DIR)/aosp_flame_hwasan.mk \
-
-COMMON_LUNCH_CHOICES := \
-    aosp_coral-userdebug \
-    coral-userdebug \
-    aosp_flame-userdebug \
-    flame-userdebug \
+# Remove AOSP prefix from product name
+PRODUCT_NAME := coral

@@ -1,0 +1,8 @@
+# flame overrides
+
+# system_ext - stock
+system_ext/lib/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvideocodec.so
+
+# product - stock
+product/etc/felica/common.cfg

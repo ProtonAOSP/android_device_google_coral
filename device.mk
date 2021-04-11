@@ -1000,6 +1000,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
 endif
 
+# Elmyra
+PRODUCT_PACKAGES += \
+    ElmyraService
+
 include hardware/google/pixel/common/pixel-common-device.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 include hardware/google/pixel/pixelstats/device.mk

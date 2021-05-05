@@ -44,6 +44,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 write_headers "coral flame"
 
 write_makefiles "$MY_DIR"/coral-proprietary-files.txt true
+write_makefiles "$MY_DIR"/coral-proprietary-files-vendor.txt true
 
 cat << EOF >> "$ANDROIDMK"
 EOF
@@ -59,6 +60,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 write_headers
 
 write_makefiles "$MY_DIR"/flame-proprietary-files.txt true
+write_makefiles "$MY_DIR"/flame-proprietary-files-vendor.txt true
 
 cat << EOF >> "$ANDROIDMK"
 EOF

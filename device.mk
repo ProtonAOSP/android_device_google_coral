@@ -1043,7 +1043,11 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.msmnile \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.cryptfshw@1.0.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    libdisplayconfig.qti.vendor \
+    vendor.display.config@2.0.vendor \
+    libgooglecamerahal.vendor:32 \
+    libgooglecamerahalutils.vendor:32 \
 
 # Enable missing vendor props
 PRODUCT_PROPERTY_OVERRIDES += \

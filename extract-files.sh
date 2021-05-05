@@ -71,11 +71,13 @@ function blob_fixup() {
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/coral-proprietary-files.txt "$CORAL_SRC" "$SECTION"
+extract "$MY_DIR"/coral-proprietary-files-vendor.txt "$CORAL_SRC" "$SECTION"
 
 # Reinitialize the helper for flame
 DEVICE=flame
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/flame-proprietary-files.txt "$FLAME_SRC" "$SECTION"
+extract "$MY_DIR"/flame-proprietary-files-vendor.txt "$FLAME_SRC" "$SECTION"
 
 "$MY_DIR"/setup-makefiles.sh

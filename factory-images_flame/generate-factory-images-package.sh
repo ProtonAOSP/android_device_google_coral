@@ -18,7 +18,7 @@ source ../../../common/clear-factory-images-variables.sh
 BUILD=eng.$USER
 DEVICE=flame
 PRODUCT=flame
-VERSION=rq2a.210405.005
+VERSION=rq2a.210505.002
 SRCPREFIX=../../../../out/target/product/flame/obj/PACKAGING/target_files_intermediates/
 BOOTLOADER=c2f2-0.3-7062597
 RADIO=g8150-00082-210106-B-7065218

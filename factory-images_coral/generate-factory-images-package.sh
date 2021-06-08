@@ -18,8 +18,8 @@ source ../../../common/clear-factory-images-variables.sh
 BUILD=eng.$USER
 DEVICE=coral
 PRODUCT=coral
-VERSION=rq2a.210505.002
+VERSION=rq3a.210605.005
 SRCPREFIX=../../../../out/target/product/coral/obj/PACKAGING/target_files_intermediates/
-BOOTLOADER=c2f2-0.3-7062597
-RADIO=g8150-00082-210106-B-7065218
+BOOTLOADER=c2f2-0.3-7241749
+RADIO=g8150-00088-210507-B-7345963
 source ../../../common/generate-factory-images-common.sh

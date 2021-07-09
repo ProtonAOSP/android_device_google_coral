@@ -15,7 +15,7 @@
 # limitations under the License.
 
 source ../../../common/clear-factory-images-variables.sh
-BUILD=eng.$USER
+BUILD=eng.android-build
 DEVICE=flame
 PRODUCT=flame
 VERSION=rq3a.210605.005

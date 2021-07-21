@@ -18,7 +18,7 @@ source ../../../common/clear-factory-images-variables.sh
 BUILD=eng.android-build
 DEVICE=flame
 PRODUCT=flame
-VERSION=rq3a.210605.005
+VERSION=rq3a.210705.001
 SRCPREFIX=../../../../out/target/product/flame/obj/PACKAGING/target_files_intermediates/
 BOOTLOADER=c2f2-0.3-7241749
 RADIO=g8150-00088-210507-B-7345963

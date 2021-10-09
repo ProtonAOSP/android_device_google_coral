@@ -70,3 +70,6 @@ PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_flame
 PRODUCT_DEVICE := flame
 PRODUCT_MODEL := Pixel 4
+
+# Match stock build fingerprint
+PRODUCT_OVERRIDE_FINGERPRINT := google/flame/flame:12/SPB5.210812.002/7671067:user/release-keys

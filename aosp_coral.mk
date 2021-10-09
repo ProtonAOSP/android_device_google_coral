@@ -69,3 +69,6 @@ PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_coral
 PRODUCT_DEVICE := coral
 PRODUCT_MODEL := Pixel 4 XL
+
+# Match stock build fingerprint
+PRODUCT_OVERRIDE_FINGERPRINT := google/coral/coral:12/SPB5.210812.002/7671067:user/release-keys

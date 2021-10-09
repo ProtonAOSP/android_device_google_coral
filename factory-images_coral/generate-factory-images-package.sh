@@ -15,11 +15,11 @@
 # limitations under the License.
 
 source ../../../common/clear-factory-images-variables.sh
-BUILD=5633534
+BUILD=eng.nobody
 DEVICE=coral
 PRODUCT=coral
-VERSION=qd1a.190604.002
-SRCPREFIX=signed-
-BOOTLOADER=c2f2-0.2-5619770
-RADIO=g8150-00039-190530-b-5618404
+VERSION=spb5.210812.002
+SRCPREFIX=../../../../out/target/product/coral/obj/PACKAGING/target_files_intermediates/
+BOOTLOADER=c2f2-0.4-7617419
+RADIO=g8150-00111-210817-B-7650554
 source ../../../common/generate-factory-images-common.sh

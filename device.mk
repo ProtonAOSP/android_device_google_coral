@@ -103,7 +103,7 @@ $(call inherit-product, $(LOCAL_PATH)/utils.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 ifeq ($(wildcard vendor/google_devices/coral/proprietary/device-vendor-coral.mk),)
-    BUILD_WITHOUT_VENDOR := true
+#    BUILD_WITHOUT_VENDOR := true
 endif
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -596,7 +596,6 @@ endif
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
     wificond \
     libwpa_client \
     WifiOverlay
@@ -1010,6 +1009,129 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM8150
 # Elmyra
 PRODUCT_PACKAGES += \
     ElmyraService
+
+# Vendor build.prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore_desede=true \
+    ro.hardware.vulkan=adreno \
+    ro.hardware.egl=adreno \
+    ro.hardware.egl=adreno \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true \
+
+# system_ext
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.4 \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.6 \
+    vendor.display.config@1.7 \
+    vendor.display.config@1.8 \
+    vendor.display.config@2.0 \
+
+# vendor
+PRODUCT_PACKAGES += \
+    android.hardware.identity_credential.xml \
+    android.frameworks.cameraservice.common@2.0.vendor \
+    android.frameworks.cameraservice.device@2.0.vendor \
+    android.frameworks.cameraservice.device@2.1.vendor \
+    android.frameworks.cameraservice.service@2.0.vendor \
+    android.frameworks.cameraservice.service@2.1.vendor \
+    android.frameworks.cameraservice.service@2.2.vendor \
+    android.frameworks.sensorservice@1.0.vendor:32 \
+    android.hardware.authsecret@1.0.vendor \
+    android.hardware.biometrics.face@1.0.vendor:64 \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.confirmationui@1.0.vendor:64 \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.identity-support-lib.vendor:64 \
+    android.hardware.identity_credential.xml.vendor \
+    android.hardware.input.classifier@1.0.vendor:64 \
+    android.hardware.input.common@1.0.vendor:64 \
+    android.hardware.keymaster@3.0.vendor:32 \
+    android.hardware.keymaster@4.0.vendor:32 \
+    android.hardware.keymaster@4.1.vendor:32 \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.neuralnetworks@1.0.vendor:64 \
+    android.hardware.neuralnetworks@1.1.vendor:64 \
+    android.hardware.neuralnetworks@1.2.vendor:64 \
+    android.hardware.neuralnetworks@1.3.vendor:64 \
+    android.hardware.oemlock@1.0.vendor:64 \
+    android.hardware.power-V1-ndk_platform.vendor:32 \
+    android.hardware.radio.config@1.0.vendor:64 \
+    android.hardware.radio.config@1.1.vendor:64 \
+    android.hardware.radio.config@1.2.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64 \
+    android.hardware.radio@1.2.vendor:64 \
+    android.hardware.radio@1.3.vendor:64 \
+    android.hardware.radio@1.4.vendor:64 \
+    android.hardware.radio@1.5.vendor:64 \
+    android.hardware.secure_element@1.1.vendor:64 \
+    android.hardware.secure_element@1.2.vendor:64 \
+    android.hardware.sensors@1.0.vendor:32 \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor:32 \
+    android.hardware.sensors@2.0.vendor:32 \
+    android.hardware.sensors@2.1.vendor:32 \
+    android.hardware.weaver@1.0.vendor:64 \
+    android.hardware.wifi@1.1.vendor:64 \
+    android.hardware.wifi@1.2.vendor:64 \
+    android.hardware.wifi@1.3.vendor:64 \
+    android.hardware.wifi@1.4.vendor:64 \
+    android.hardware.wifi@1.5.vendor:64 \
+    android.system.net.netd@1.0.vendor:64 \
+    android.system.net.netd@1.1.vendor:64 \
+    chre \
+    ese_spi_st:32 \
+    hardware.google.bluetooth.bt_channel_avoidance@1.0.vendor \
+    hardware.google.bluetooth.sar@1.0.vendor \
+    lib_sensor_listener:64 \
+    libavservices_minijail.vendor:64 \
+    libavservices_minijail_vendor:32 \
+    libcamera2ndk_vendor \
+    libcld80211:32 \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl_plugin.vendor \
+    libcodec2_vndk.vendor \
+    libcppbor_external.vendor:64 \
+    libcppcose_rkp.vendor:64 \
+    libdisplayconfig.qti.vendor \
+    libhwbinder.vendor \
+    libjson:64 \
+    libkeymaster_messages.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libmedia_ecoservice.vendor \
+    libnos:64 \
+    libnos_client_citadel:64 \
+    libnos_datagram:64 \
+    libnos_datagram_citadel:64 \
+    libnos_transport:64 \
+    libnosprotos:64 \
+    libprotobuf-cpp-full-vendorcompat \
+    libpuresoftkeymasterdevice.vendor:64 \
+    libqti_vndfwk_detect.vendor:32 \
+    libsensorndkbridge:32 \
+    libsoft_attestation_cert.vendor:64 \
+    libstagefright_bufferpool@2.0.1.vendor \
+    libteeui_hal_support.vendor:64 \
+    libtextclassifier_hash.vendor:64 \
+    libtinycompress \
+    libvndfwk_detect_jni.qti.vendor \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    libwifi-hal:64 \
+    nos_app_avb:64 \
+    nos_app_identity:64 \
+    nos_app_keymaster:64 \
+    nos_app_weaver:64 \
+    sound_trigger.primary.msmnile \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.display.mapper@1.0.vendor \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
 
 # Security
 -include vendor/qcom/sm8150/proprietary/securemsm/config/keymaster_vendor_proprietary_board.mk

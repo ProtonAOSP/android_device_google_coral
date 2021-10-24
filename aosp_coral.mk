@@ -71,4 +71,4 @@ PRODUCT_DEVICE := coral
 PRODUCT_MODEL := Pixel 4 XL
 
 # Match stock build fingerprint
-PRODUCT_OVERRIDE_FINGERPRINT := google/coral/coral:12/SPB5.210812.002/7671067:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/coral/coral:12/SP1A.210812.016.A1/7796139:user/release-keys

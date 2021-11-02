@@ -18,7 +18,7 @@ source ../../../common/clear-factory-images-variables.sh
 BUILD=eng.nobody
 DEVICE=coral
 PRODUCT=coral
-VERSION=spb5.210812.002
+VERSION=sp1a.211105.004
 SRCPREFIX=../../../../out/target/product/coral/obj/PACKAGING/target_files_intermediates/
 BOOTLOADER=c2f2-0.4-7617419
 RADIO=g8150-00111-210817-B-7650554

@@ -1015,7 +1015,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true \
     ro.hardware.vulkan=adreno \
     ro.hardware.egl=adreno \
-    ro.hardware.egl=adreno \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
 
